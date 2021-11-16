@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+  form(method="POST" action="/new")
+    h New message 
+    input.name-input(type="text" name="name" value="" placeholder="Name")
+    input.msg-input(type="text" name="message" value="" placeholder="Message")
+    button Submit

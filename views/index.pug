@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  .board
+    each msg in messages
+      .message
+        p.text= msg.text
+        span.user= msg.user 
+        span.time= msg.added
+  button.add-msg(type="button" onclick="window.location.href='/new'") +
