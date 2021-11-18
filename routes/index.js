@@ -28,7 +28,7 @@ router.post('/new', (req, res, next) => {
   const user = req.body.name;
   const added = new Date();
 
-  messages.push({ text, user, added });
+  messages.unshift({ text, user, added });
 
   res.redirect('/');
 });
